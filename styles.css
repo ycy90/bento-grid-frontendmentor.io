@@ -1,0 +1,117 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  min-height: 100vh;
+  padding: 50px;
+}
+
+.main-content {
+  display: flex;
+  gap: 40px;
+  max-width: 1440px;
+  margin-inline: auto;
+}
+
+.a {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 420px;
+  gap: 40px;
+}
+
+.b {
+  width: 100%;
+  display: grid;
+  column-gap: 40px;
+  row-gap: 40px;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 35% 1fr 1fr;
+  grid-template-areas:
+    "ba ba bb"
+    "bc bd bb"
+    "be bf bf";
+}
+
+.box {
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.aa {
+  width: 100%;
+  height: 50vh;
+  border: 1px solid hsl(31, 66%, 93%);
+  background-color: hsl(31, 66%, 93%);
+  grid-area: aa;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  font-size: 50px;
+  padding-left: 50px;
+}
+
+.create-post {
+  width: 200px;
+  height: 100px;
+}
+
+.ab {
+  width: 100%;
+  height: 50vh;
+  border: 1px solid hsl(39, 100%, 71%);
+  background-color: hsl(39, 100%, 71%);
+  grid-area: ab;
+}
+
+.ba {
+  width: 100%;
+  grid-area: ba;
+  border: 1px solid hsl(256, 67%, 59%);
+  background-color: hsl(256, 67%, 59%);
+}
+
+.bb {
+  grid-area: bb;
+  border: 1px solid hsl(254, 88%, 90%);
+  background-color: hsl(254, 88%, 90%);
+}
+
+.bc {
+  grid-area: bc;
+  border: 1px solid brown;
+  background-color: hsl(0, 0%, 100%);
+}
+
+.bd {
+  grid-area: bd;
+  border: 1px solid hsl(39, 100%, 71%);
+  background-color: hsl(39, 100%, 71%);
+}
+
+.be {
+  grid-area: be;
+  border: 1px solid black;
+  background-color: hsl(0, 0%, 100%);
+}
+
+.bf {
+  grid-area: bf;
+  border: 1px solid hsl(256, 67%, 59%);
+  background-color: hsl(256, 67%, 59%);
+}
