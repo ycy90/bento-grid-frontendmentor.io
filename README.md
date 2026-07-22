@@ -1,3 +1,5 @@
+# MARKDOWN
+
 # Bento Grid Solution
 
 ## Disclaimer
@@ -35,3 +37,8 @@ Today's focus was building the overall page structure and layout.
 - Remove temporary development styles and clean up the CSS.
 - Implement responsive design for tablet and mobile devices.
 - Perform a final code refactor and optimization.
+
+ 
+ # MARKDOWN
+> This project is part of my Frontend Mentor practice and is intended to improve my HTML, CSS, Flexbox, and CSS Grid skills.
+
