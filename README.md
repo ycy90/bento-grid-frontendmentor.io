@@ -26,17 +26,19 @@ Today's focus was building the overall page structure and layout.
 - Started applying the visual styling based on the reference design.
 - Added background colors, spacing, borders, and border-radius to match the design.
 - Structured the CSS to keep shared styles separate from component-specific styles.
+- Completed the desktop layout and matched the original design more closely.
+- Styled and positioned all images, including cropped illustrations using overflow and transforms where required.
+- Completed the desktop layout.
 
 ### Next Steps
 
-- Finish the remaining CSS styling.
-- Improve typography, spacing, and alignment.
-- Replace temporary HTML image widths with CSS.
 - Refactor class names to be more descriptive.
 - Improve semantic HTML where appropriate (`article`, heading hierarchy, etc.).
-- Remove temporary development styles and clean up the CSS.
 - Implement responsive design for tablet and mobile devices.
 - Perform a final code refactor and optimization.
+- Expand CSS variables (spacing, typography, border-radius, etc.).
+- Make the page responsive.
+- Final code cleanup and optimization.
 
  
  # MARKDOWN
