@@ -1,25 +1,72 @@
+/* ==== RESET ====== */
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* ==== VARIABLES ====== */
+
 :root {
+  /* ==== COLORS ====== */
+
   --color-bg: hsl(0, 3%, 94%);
+  --color-purple-light: hsl(254, 88%, 90%);
+  --color-purple-dark: hsl(256, 67%, 59%);
+  --color-yellow-light: hsl(31, 66%, 93%);
+  --color-yellow-dark: hsl(39, 100%, 71%);
+  --color-white: hsl(0, 0%, 100%);
+  --color-black: hsl(0, 0%, 7%);
+
+  /* ==== FONT-SIZES ====== */
+
+  --fs-sm: 20px;
+  --fs-xmd: 34px;
+  --fs-md: 40px;
+  --fs-lg: 60px;
+  --fs-xlg: 70px;
+
+  /* ==== GAPS ====== */
+
+  --gap-xsm: 10px;
+  --gap-sm: 20px;
+  --gap-md: 30px;
+  --gap-lg: 40px;
+  --gap-xlg: 50px;
+
+  /* ==== FONT-WEIGHTS ====== */
+
+  --fw-md: 500;
+  --fw-sb: 600;
+  --fw-bd: 700;
+
+  /* ==== LINE-HEIGHTS ====== */
+
+  --lh-tight: 0.8;
+  --lh-medium: 0.9;
+  --lh-normal: 1;
+  --lh-relaxed: 1.1;
+  --lh-loose: 1.5;
 }
+
+/* ==== GLOBAL STYLES ====== */
 
 body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 50px;
+  gap: var(--gap-xlg);
   background-color: var(--color-bg);
   font-family: "DM Sans", sans-serif;
+  padding-top: 50px;
 }
+
+/* ==== LAYOUT ====== */
 
 .main-content {
   display: flex;
-  gap: 40px;
+  gap: var(--gap-lg);
   margin-inline: auto;
   max-width: 1440px;
 }
@@ -27,13 +74,13 @@ body {
 .a {
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: var(--gap-lg);
   flex: 1;
 }
 
 .b {
   display: grid;
-  gap: 30px;
+  gap: var(--gap-md);
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 35% 1fr 1fr;
   grid-template-areas:
@@ -43,6 +90,8 @@ body {
   flex: 3;
 }
 
+/* ==== SHARED COMPONENTS ====== */
+
 .box {
   border-radius: 20px;
   display: flex;
@@ -51,24 +100,24 @@ body {
   padding: 24px;
 }
 
+/* ==== LEFT SIDE (A) ====== */
+
+/* ==== COMPONENT AA - (Create Post) ====== */
 .aa {
   width: 100%;
   flex: 1;
-  background-color: hsl(31, 66%, 93%);
+  background-color: var(--color-yellow-light);
   grid-area: aa;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  gap: 30px;
-  font-size: 50px;
+  gap: var(--gap-md);
+  font-size: var(--fs-md);
   padding-left: 50px;
 }
 
 .accent-purple {
-  color: hsl(256, 67%, 59%);
+  color: var(--color-purple-dark);
   font-style: italic;
-  font-weight: 500;
+  font-weight: var(--fw-md);
 }
 
 .create-post {
@@ -80,34 +129,44 @@ body {
   width: 100%;
 }
 
+/* ==== COMPONENT AB - (Using AI) ====== */
+
 .ab {
   width: 100%;
   flex: 1;
-  background-color: hsl(39, 100%, 71%);
+  background-color: var(--color-yellow-dark);
   grid-area: ab;
+  align-items: flex-start;
 }
 
 .grid-ab-content {
-  font-size: 40px;
+  font-size: var(--fs-md);
   flex: 1;
-  width: 10ch;
+  width: 8ch;
+  font-weight: var(--fw-bd);
+  line-height: var(--lh-normal);
+  padding-top: 20px;
 }
+
+/* ==== RIGHT SIDE (B) ====== */
+
+/* ==== COMPONENT BA - (Social Media AI)====== */
 
 .ba {
   width: 100%;
   grid-area: ba;
-  background-color: hsl(256, 67%, 59%);
+  background-color: var(--color-purple-dark);
   justify-content: space-evenly;
 }
 
 .grid-ba-content-top {
-  color: white;
-  font-size: 70px;
+  color: var(--color-white);
+  font-size: var(--fs-xlg);
   text-align: center;
 }
 
 .accent-yellow {
-  color: hsl(39, 100%, 71%);
+  color: var(--color-yellow-dark);
 }
 
 .five-stars-img {
@@ -116,22 +175,26 @@ body {
 }
 
 .grid-ba-content-bottom {
-  color: white;
-  font-size: 20px;
+  color: var(--color-white);
+  font-size: var(--fs-sm);
 }
+
+/* ==== COMPONENT BB - (Schedule) ====== */
 
 .bb {
   grid-area: bb;
-  background-color: hsl(254, 88%, 90%);
+  background-color: var(--color-purple-light);
   overflow: hidden;
   align-items: flex-start;
-  gap: 20px;
+  gap: var(--gap-sm);
 }
 
 .grid-bb-content-top {
-  font-size: 40px;
-  font-weight: 500;
+  font-size: var(--fs-md);
+  font-weight: var(--fw-md);
   width: 12ch;
+  padding-right: 16px;
+  line-height: var(--lh-medium);
 }
 
 .schedule-img {
@@ -141,17 +204,19 @@ body {
 }
 
 .grid-bb-content-bottom {
-  font-size: 24px;
+  font-size: var(--fs-sm);
   width: 18ch;
 }
 
+/* ==== COMPONENT BC - (Multiple Platforms) ====== */
+
 .bc {
   grid-area: bc;
-  background-color: hsl(0, 0%, 100%);
+  background-color: var(--color-white);
   position: relative;
   overflow: hidden;
   padding: 20px 30px;
-  gap: 20px;
+  gap: var(--gap-lg);
 }
 
 .platforms-img {
@@ -160,60 +225,68 @@ body {
 }
 
 .grid-bc-content {
-  font-size: 36px;
-  line-height: 0.9;
+  font-size: var(--fs-md);
+  line-height: var(--lh-medium);
+  font-weight: var(--fw-sb);
 }
+
+/* ==== COMPONENT BD - (Posting Schedule)====== */
 
 .bd {
   grid-area: bd;
-  background-color: hsl(39, 100%, 71%);
+  background-color: var(--color-yellow-dark);
   overflow: hidden;
-  display: flex;
-  flex-direction: column;
+  align-items: flex-start;
 }
 
 .grid-bd-content {
-  font-size: 34px;
-  font-weight: 600;
+  font-size: var(--fs-xmd);
+  font-weight: var(--fw-sb);
   width: 70%;
   padding-top: 20px;
-  line-height: 1.1;
+  line-height: var(--lh-relaxed);
 }
 
 .consistent-img {
   width: 90%;
   transform: translateY(45px);
 }
+
+/* ==== COMPONENT BE - (Audience Growth) ====== */
+
 .be {
   grid-area: be;
-  background-color: hsl(0, 0%, 100%);
+  background-color: var(--color-white);
 }
 
 .grid-be-content {
   display: flex;
   flex-direction: column;
   flex: 1;
-  font-size: 20px;
-  line-height: 1.5;
+  font-size: var(--fs-sm);
+  line-height: var(--lh-loose);
 }
 
 .font-size-big {
-  font-size: 60px;
-  font-weight: bold;
+  font-size: var(--fs-lg);
+  font-weight: var(--fw-bd);
 }
+
 .followers-img {
   width: 80%;
 }
 
+/* ==== COMPONENT BF - (Follower-Growth) ====== */
+
 .bf {
   grid-area: bf;
-  background-color: hsl(256, 67%, 59%);
+  background-color: var(--color-purple-dark);
 }
 
 .flex-row {
   display: flex;
   flex-direction: row;
-  gap: 10px;
+  gap: var(--gap-xsm);
 }
 
 .growth-chart-img {
@@ -221,12 +294,14 @@ body {
 }
 
 .grid-ff-content {
-  font-size: 40px;
-  color: hsl(0, 0%, 100%);
+  font-size: 44px;
+  color: var(--color-white);
 }
 
+/* ==== FOOTER ====== */
+
 .attribution {
-  font-size: 24px;
+  font-size: var(--fs-xmd);
 }
 
 .attribution a {
