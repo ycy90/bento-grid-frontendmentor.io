@@ -4,7 +4,8 @@
 
 ## Disclaimer
 
-This is the free version of the Frontend Mentor challenge, which does not include a Figma design file. As a result, the layout, spacing, typography, and colors are recreated by visually matching the reference image as closely as possible.
+Note: This is the free version of the Frontend Mentor challenge, which does not include a Figma design file. As a result, the layout, spacing, typography, and colors are recreated by visually matching the reference image as closely as possible.
+Note: Class names currently follow the grid structure (aa, ab, ba, etc.) to simplify CSS Grid practice and layout visualization. They will be refactored into more descriptive names later.
 
 ---
 
@@ -29,14 +30,17 @@ Today's focus was building the overall page structure and layout.
 - Completed the desktop layout and matched the original design more closely.
 - Styled and positioned all images, including cropped illustrations using overflow and transforms where required.
 - Completed the desktop layout.
+- Refactored and finalized the CSS variables structure.
+- Organized the stylesheet into logical sections with descriptive comments (Reset, Variables, Layout, Components, Footer, etc.).
+- Improved CSS readability and overall file organization.
+- Started reviewing and refining class names (still in progress).
+- Cleaned up the codebase to make future maintenance easier.
 
 ### Next Steps
 
 - Refactor class names to be more descriptive.
 - Improve semantic HTML where appropriate (`article`, heading hierarchy, etc.).
-- Implement responsive design for tablet and mobile devices.
 - Perform a final code refactor and optimization.
-- Expand CSS variables (spacing, typography, border-radius, etc.).
 - Make the page responsive.
 - Final code cleanup and optimization.
 
